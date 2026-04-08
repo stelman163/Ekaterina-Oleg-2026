@@ -1013,8 +1013,8 @@
         });
         
         // ========== КОНФИГУРАЦИЯ АНКЕТЫ ==========
-        // НОВЫЙ URL ВАШЕГО СКРИПТА
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby2KyoDcFNcV4OsPgoF62fxXJiOiozevHZZXhRXA4Hr6xytQOsK-xkZOOiNtD5O51sJ/exec';
+        // ВАШ НОВЫЙ URL
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz8hpRdYALKysEwIIYdRCdS5PbliVZedexFQBmLkSYVVhkmhLUOl3n26Rjsl55exc4e/exec';
         
         let isSubmitted = false;
         let isLocked = false;
@@ -1150,14 +1150,10 @@
                 
                 if(gFull !== 'Ваш литературный жанр?') {
                     gentDrinkShort = extractDrinkShort(gFull);
-                } else {
-                    gentDrinkShort = "";
                 }
                 
                 if(lFull !== 'Ваше идеальное послесловие?') {
                     ladyDrinkShort = extractDrinkShort(lFull);
-                } else {
-                    ladyDrinkShort = "";
                 }
             }
             
@@ -1165,7 +1161,6 @@
                 guestResponseNumber = getGuestResponseNumber();
             }
             
-            // ПРАВИЛЬНЫЙ payload - данные соответствуют колонкам в Google Sheets
             const payload = {
                 responseNumber: guestResponseNumber,
                 attendance: isPresent ? "Да" : "Нет",
@@ -1182,22 +1177,35 @@
             try {
                 const response = await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
-                    mode: 'no-cors',
+                    mode: 'cors',
                     headers: { 
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(payload)
                 });
                 
+                const result = await response.json();
+                console.log('Ответ сервера:', result);
+                
                 const statusDiv = document.getElementById('telegramStatus');
-                statusDiv.innerHTML = `✅ Ответ отправлен (№${guestResponseNumber})`;
-                statusDiv.style.color = 'var(--sage)';
-                return true;
+                
+                if (result.status === 'success') {
+                    statusDiv.innerHTML = `✅ Ответ отправлен (№${guestResponseNumber})`;
+                    statusDiv.style.color = 'var(--sage)';
+                    return true;
+                } else {
+                    statusDiv.innerHTML = `❌ Ошибка: ${result.message || 'Неизвестная ошибка'}`;
+                    statusDiv.style.color = '#ff6b6b';
+                    submitBtn.disabled = false;
+                    submitText.innerHTML = isPresent ? 'ВНЕСТИ В СПИСОК ГЕРОЕВ' : 'НАПИСАТЬ В ТИТРАХ';
+                    submitBtn.style.animation = '';
+                    return false;
+                }
                 
             } catch(e) {
                 console.error('Ошибка отправки:', e);
                 const statusDiv = document.getElementById('telegramStatus');
-                statusDiv.innerHTML = '❌ Ошибка отправки. Попробуйте снова.';
+                statusDiv.innerHTML = '❌ Ошибка отправки. Проверьте интернет и попробуйте снова.';
                 statusDiv.style.color = '#ff6b6b';
                 submitBtn.disabled = false;
                 submitText.innerHTML = isPresent ? 'ВНЕСТИ В СПИСОК ГЕРОЕВ' : 'НАПИСАТЬ В ТИТРАХ';
