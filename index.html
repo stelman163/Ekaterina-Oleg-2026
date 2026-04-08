@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Екатерина & Олег | Приглашение на свадьбу 09.07.2026</title>
+    
+    <!-- Open Graph / Social Media Preview -->
+    <meta property="og:title" content="Екатерина & Олег | Приглашение на свадьбу 09.07.2026">
+    <meta property="og:description" content="Дорогие родные и близкие! Будем рады разделить с вами этот прекрасный день. Тольятти, ресторан «Причал-8»">
+    <meta property="og:image" content="https://i.imgur.com/10cUlA3.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:url" content="https://ваш-сайт.ru">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Екатерина & Олег | Приглашение на свадьбу">
+    <meta name="twitter:description" content="09.07.2026, Тольятти, ресторан «Причал-8»">
+    <meta name="twitter:image" content="https://i.imgur.com/10cUlA3.jpeg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&family=Playfair+Display:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --glass: rgba(255, 255, 255, 0.12);
+            --glass-border: rgba(255, 255, 255, 0.25);
+            --linen: #E0D7D0;
+            --sage: #b8c9a8;
+            --success-green: #7eb09e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: white;
+            background: #000;
+            overflow-x: hidden;
+        }
+
+        .video-bg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -2;
+            object-fit: cover;
+            opacity: 1;
+            background: #000;
+            pointer-events: none;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 25px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .glass-img {
+            background: var(--glass);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid var(--glass-border);
+            padding: 8px;
+            width: 100%;
+            max-width: 320px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        #page1 {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 60px 15px;
+            text-align: center;
+            background: url('https://i.imgur.com/JD4zENl.jpeg') center/cover no-repeat;
+            position: relative;
+        }
+
+        #page1::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .invitation-top {
+            position: absolute;
+            top: 50px;
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        .hero-text {
+            width: 100%;
+            max-width: 450px;
+            z-index: 2;
+            transform: translateY(79px);
+        }
+
+        .names {
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .names span {
+            display: block;
+            font-size: 2.8rem;
+            letter-spacing: -1px;
+            color: var(--linen);
+            line-height: 1.1;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .ampersand-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 2px 0;
+        }
+
+        .ampersand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--sage);
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .line {
+            width: 55px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--sage), transparent);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .invite-text1 { 
+            font-size: 0.85rem; 
+            line-height: 1.4; 
+            margin-bottom: 15px; 
+            font-weight: 300;
+            color: var(--linen);
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Manrope', sans-serif;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        .timer-container1 {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 10px 0;
+        }
+
+        .timer-block1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 45px;
+        }
+
+        .timer-number1 {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 200;
+            color: var(--sage);
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .timer-label1 {
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-top: 2px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .date1 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            margin: 12px 0 5px;
+            letter-spacing: 3px;
+            color: var(--linen);
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .location1 {
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--linen);
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        #page2, #page3, #page4 {
+            background: transparent;
+        }
+
+        .couple-quote {
+            font-style: italic;
+            margin: 15px 0 35px;
+            font-family: 'Playfair Display';
+            letter-spacing: 1px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .person-container {
+            width: 100%;
+            max-width: 320px;
+            margin-bottom: 25px;
+        }
+
+        .person-container:last-child {
+            margin-bottom: 0;
+        }
+
+        .person-label {
+            font-size: 1.1rem;
+            margin-top: 8px;
+            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+            color: var(--sage);
+            text-shadow: 0 0 8px var(--sage);
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--sage), transparent);
+            margin: 30px 0 20px;
+        }
+
+        .gift-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 25px;
+            width: 100%;
+            max-width: 340px;
+            border-radius: 8px;
+        }
+
+        .gift-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            font-weight: 300;
+            color: rgba(255,255,255,0.9);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        #page3 h2 {
+            margin-bottom: 50px; 
+            letter-spacing: 5px; 
+            font-family: 'Cinzel'; 
+            font-weight: 300;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .timeline-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            padding-left: 45px;
+            text-align: left;
+        }
+        .thread-line {
+            position: absolute;
+            left: 15px; top: 0;
+            width: 1px; height: 100%;
+            background: rgba(255,255,255,0.15);
+        }
+        .thread-progress {
+            position: absolute;
+            left: 15px; top: 0;
+            width: 2px; height: 0%;
+            background: linear-gradient(to bottom, transparent, #fff, var(--sage));
+            z-index: 2;
+            transition: height 0.1s linear;
+        }
+        .timing-item {
+            margin-bottom: 40px;
+            opacity: 0.15;
+            transition: 0.6s ease;
+        }
+        .timing-item.focused { 
+            opacity: 1; 
+            transform: translateX(8px); 
+        }
+        .timing-item b { 
+            font-family: 'Montserrat'; 
+            font-size: 0.8rem; 
+            letter-spacing: 2px; 
+            color: var(--sage); 
+            display: block; 
+            text-shadow: 0 0 8px var(--sage);
+        }
+        .timing-item span { 
+            font-size: 1.25rem; 
+            display: block; 
+            margin-top: 5px; 
+            font-family: 'Playfair Display', serif;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .timing-item small {
+            font-size: 0.7rem;
+            opacity: 0.8;
+            display: block;
+            margin-top: 3px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .dress-box {
+            width: 100%;
+            max-width: 340px;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid var(--sage);
+            box-shadow: 0 0 5px var(--sage), 0 0 10px var(--sage), 0 0 20px var(--sage), 0 0 40px rgba(184, 201, 168, 0.5);
+        }
+
+        .dress-box h2 {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            color: var(--sage);
+            font-family: 'Cinzel', serif;
+            text-shadow: 0 0 10px var(--sage);
+        }
+
+        .dress-box p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .actors-card {
+            width: 100%;
+            max-width: 340px;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid var(--sage);
+            box-shadow: 0 0 5px var(--sage), 0 0 10px var(--sage), 0 0 20px var(--sage), 0 0 40px rgba(184, 201, 168, 0.5);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+
+        .actors-card .form-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            margin-bottom: 20px;
+            margin-top: -5px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(184,201,168,0.2);
+            padding-bottom: 10px;
+            color: var(--sage);
+            text-align: center;
+            text-shadow: 0 0 10px var(--sage);
+        }
+
+        .actors-card .guest-label { 
+            font-size: 0.7rem; 
+            opacity: 0.8; 
+            letter-spacing: 3px; 
+            margin-top: 15px; 
+            text-align: left; 
+            width: 100%; 
+            font-family: 'Montserrat'; 
+            text-transform: uppercase; 
+            color: var(--sage);
+            font-weight: 500;
+            text-shadow: 0 0 5px var(--sage);
+        }
+        
+        .actors-card .quote-hint { 
+            font-size: 0.6rem; 
+            text-align: left; 
+            opacity: 0.7; 
+            font-style: italic; 
+            margin-top: 5px; 
+            margin-bottom: 8px;
+            font-family: 'Montserrat'; 
+            line-height: 1.2; 
+            transition: color 0.3s;
+            color: rgba(255,255,255,0.8);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .actors-card input {
+            width: 100%;
+            padding: 12px 0;
+            margin: 5px 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            font-family: 'Montserrat';
+            font-size: 0.9rem;
+            outline: none;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            transition: border-color 0.3s ease;
+        }
+
+        .actors-card input:focus {
+            border-bottom-color: var(--sage);
+        }
+
+        .actors-card input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+        
+        .actors-card hr {
+            margin: 15px 0;
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .actors-card .attendance-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0 15px;
+            font-family: 'Montserrat';
+            font-size: 0.85rem;
+            background: rgba(184, 201, 168, 0.1);
+            padding: 10px;
+            border-radius: 40px;
+            border: 1px solid var(--sage);
+            box-shadow: 0 0 10px var(--sage), 0 0 20px rgba(184, 201, 168, 0.4);
+        }
+        
+        .actors-card .attendance-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 5px 12px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .actors-card .attendance-option:hover {
+            background: rgba(184, 201, 168, 0.2);
+        }
+        
+        .actors-card .attendance-option input[type="radio"] {
+            width: auto;
+            margin: 0;
+            accent-color: var(--sage);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        
+        .actors-card .attendance-option span {
+            color: var(--sage);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .actors-card .section-hidden {
+            display: none !important;
+        }
+        
+        .actors-card .absent-message {
+            background: rgba(184, 201, 168, 0.1);
+            border: 1px solid var(--sage);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+            font-family: 'Montserrat';
+            font-size: 0.8rem;
+            color: var(--sage);
+            font-style: italic;
+            line-height: 1.5;
+            box-shadow: 0 0 15px var(--sage), 0 0 30px rgba(184, 201, 168, 0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .actors-card .absent-message.highlight {
+            background: rgba(255, 80, 80, 0.25);
+            border: 2px solid #ff6b6b;
+            box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+            animation: pulseRed 1s ease-in-out;
+        }
+
+        @keyframes pulseRed {
+            0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+        }
+        
+        .actors-card .theater-button {
+            width: 100%;
+            padding: 14px;
+            background: transparent;
+            color: var(--sage);
+            font-weight: bold;
+            letter-spacing: 2px;
+            border: 2px solid var(--sage);
+            cursor: pointer;
+            font-family: 'Montserrat';
+            text-transform: uppercase;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            box-shadow: 0 0 12px var(--sage), 0 0 24px rgba(184, 201, 168, 0.4);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .actors-card .theater-button:disabled {
+            cursor: default;
+            opacity: 1;
+        }
+        
+        .actors-card .theater-button.submitted-success {
+            color: var(--success-green);
+            border-color: var(--success-green);
+            box-shadow: 0 0 12px var(--success-green), 0 0 24px rgba(126, 176, 158, 0.4);
+        }
+        
+        .actors-card .timer-container {
+            text-align: center;
+            margin: 15px 0 0;
+            padding: 10px;
+            background: rgba(184, 201, 168, 0.1);
+            border-radius: 8px;
+            border: 1px solid var(--sage);
+            box-shadow: 0 0 15px var(--sage), 0 0 30px rgba(184, 201, 168, 0.3);
+        }
+        
+        .actors-card .timer-container.hidden {
+            display: none;
+        }
+        
+        .actors-card .timer-text {
+            font-family: 'Montserrat';
+            font-size: 0.7rem;
+            color: var(--sage);
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .actors-card .timer-display {
+            font-family: 'Montserrat';
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 0 10px var(--sage), 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 8px;
+        }
+        
+        .actors-card .cancel-button {
+            background: transparent;
+            border: 1px solid var(--sage);
+            color: var(--sage);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-family: 'Montserrat';
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 5px;
+            box-shadow: 0 0 5px var(--sage);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .actors-card .cancel-button:hover {
+            background: var(--sage);
+            color: black;
+            box-shadow: 0 0 15px var(--sage);
+        }
+        
+        .actors-card .custom-select {
+            position: relative;
+            width: 100%;
+            margin: 5px 0;
+        }
+
+        .actors-card .select-header {
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            font-family: 'Montserrat';
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            transition: all 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .actors-card .select-header span:first-child {
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+
+        .actors-card .select-header .arrow {
+            font-size: 12px;
+            transition: transform 0.3s;
+            color: var(--sage);
+        }
+
+        .actors-card .select-header.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .actors-card .select-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            z-index: 99999;
+            border-radius: 8px;
+            margin-top: 5px;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .actors-card .select-dropdown.show {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 2px solid var(--sage);
+            box-shadow: 0 0 5px var(--sage), 0 0 10px var(--sage);
+        }
+        
+        .actors-card .select-option {
+            padding: 12px 15px;
+            cursor: pointer;
+            font-family: 'Montserrat';
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            color: #ffffff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .actors-card .select-option:hover {
+            background: rgba(184, 201, 168, 0.2);
+        }
+
+        @keyframes pulseNeon {
+            0% {
+                box-shadow: 0 0 5px var(--sage), 0 0 10px var(--sage), 0 0 20px rgba(184, 201, 168, 0.5);
+                border-color: var(--sage);
+            }
+            50% {
+                box-shadow: 0 0 20px var(--sage), 0 0 40px var(--sage), 0 0 60px rgba(184, 201, 168, 0.8);
+                border-color: #ffffff;
+                background: rgba(184, 201, 168, 0.15);
+            }
+            100% {
+                box-shadow: 0 0 5px var(--sage), 0 0 10px var(--sage), 0 0 20px rgba(184, 201, 168, 0.5);
+                border-color: var(--sage);
+            }
+        }
+        
+        .form-disabled input,
+        .form-disabled .select-header,
+        .form-disabled .attendance-option {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .error-message {
+            color: #ff6b6b;
+            font-size: 0.7rem;
+            margin: 5px 0;
+            display: none;
+            font-family: 'Montserrat';
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        .telegram-status {
+            font-size: 0.7rem;
+            margin-top: 10px;
+            font-family: 'Montserrat';
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hidden {
+            display: none;
+        }
+
+        .map-container {
+            width: 100%;
+            max-width: 340px;
+            margin: 10px auto 20px;
+            padding: 10px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .map-title-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .map-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: var(--sage);
+            letter-spacing: 1px;
+            text-align: center;
+            font-weight: 500;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 150px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 10px;
+        }
+
+        #yandex-map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .map-address {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.4;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 480px) {
+            .hero-text { transform: translateY(59px); }
+            .names span { font-size: 2.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <video id="bgVideo" class="video-bg" autoplay loop muted playsinline preload="auto" poster="https://i.imgur.com/JD4zENl.jpeg">
+        <source src="https://cdn.midjourney.com/video/3a30a414-e946-4758-805c-d17483696260/0.mp4" type="video/mp4">
+    </video>
+
+    <!-- СТРАНИЦА 1 -->
+    <section id="page1">
+        <div class="invitation-top">Приглашение на свадьбу</div>
+        <div class="hero-text">
+            <div class="names"><span>Екатерина</span><div class="ampersand-container"><div class="line"></div><div class="ampersand">&</div><div class="line"></div></div><span>Олег</span></div>
+            <div class="invite-text1">Дорогие родные и близкие!<br>Мы были бы счастливы разделить это прекрасное событие вместе с вами.</div>
+            <div class="timer-container1"><div class="timer-block1"><span class="timer-number1" id="days">00</span><span class="timer-label1">дней</span></div><div class="timer-block1"><span class="timer-number1" id="hours">00</span><span class="timer-label1">часов</span></div><div class="timer-block1"><span class="timer-number1" id="minutes">00</span><span class="timer-label1">минут</span></div><div class="timer-block1"><span class="timer-number1" id="seconds">00</span><span class="timer-label1">секунд</span></div></div>
+            <div class="date1">09.07.2026</div>
+            <div class="location1">Ресторан "Причал-8" • Тольятти</div>
+        </div>
+    </section>
+
+    <!-- СТРАНИЦА 2 -->
+    <section id="page2">
+        <img src="https://i.imgur.com/g0wzxFp.jpeg" class="glass-img" alt="Мы">
+        <p class="couple-quote">Я — это ты, ты — это Я... 🤍</p>
+        <div class="person-container"><img src="https://i.imgur.com/6WHzvK0.jpeg" class="glass-img" alt="Жених"><p class="person-label">Жених</p></div>
+        <div class="person-container"><img src="https://i.imgur.com/WzJo4uN.jpeg" class="glass-img" alt="Невеста"><p class="person-label">Невеста</p></div>
+        <div class="divider"></div>
+        <div class="gift-card"><p class="gift-text">Для нас самое важное — ваше присутствие 💛 Однако, мы будем не против вместо цветов получить в дополнение к подарку лотерейный билетик 😀😉🫶🏽</p></div>
+    </section>
+
+    <!-- СТРАНИЦА 3 (ТАЙМИНГ) -->
+    <section id="page3">
+        <h2>ТАЙМИНГ</h2>
+        <div class="timeline-container">
+            <div class="thread-line"></div>
+            <div id="thread" class="thread-progress"></div>
+            <div class="timing-item"><b>17:00</b><span>Сбор гостей & Фуршет</span><small>Встреча и welcome-фуршет</small></div>
+            <div class="timing-item"><b>17:30</b><span>Выездная регистрация</span><small>(крыша ресторана)</small></div>
+            <div class="timing-item"><b>18:00</b><span>Банкет</span></div>
+            <div class="timing-item"><b>22:00</b><span>Торт</span></div>
+            <div class="timing-item"><b>22:30</b><span>Завершение банкета</span></div>
+            <div class="timing-item"><b>23:00</b><span>Дискотека с молодожёнами</span></div>
+        </div>
+    </section>
+
+    <!-- СТРАНИЦА 4 -->
+    <section id="page4">
+        <div class="dress-box"><h2>CLASSIC</h2><p>СОВРЕМЕННАЯ КЛАССИКА</p><p>Мужчинам — белая рубашка<br>Девушкам — нежные тона</p></div>
+        
+        <!-- АНКЕТА -->
+        <div class="actors-card" id="formCard">
+            <div class="form-title">ДЕЙСТВУЮЩИЕ ЛИЦА</div>
+            <form id="weddingForm">
+                <div class="attendance-toggle">
+                    <label class="attendance-option">
+                        <input type="radio" name="attendance" value="yes" checked> 
+                        <span>В главной роли</span>
+                    </label>
+                    <label class="attendance-option">
+                        <input type="radio" name="attendance" value="no"> 
+                        <span>За кулисами</span>
+                    </label>
+                </div>
+
+                <div id="attendanceYes">
+                    <div class="guest-label">GENTLEMAN</div>
+                    <input type="text" id="gentName" placeholder="Имя и Фамилия" autocomplete="off">
+                    <p class="quote-hint" id="quote-gent">«Для тех, кто ценит крепкий сюжет...»</p>
+                    
+                    <div class="custom-select" id="customSelectGent">
+                        <div class="select-header" onclick="if(!isLocked && !isSubmitted) toggleDropdown('gentDropdown')">
+                            <span>Ваш литературный жанр?</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="select-dropdown" id="gentDropdown">
+                            <div class="select-option" data-value="Коньяк" onclick="if(!isLocked && !isSubmitted) selectOption('gent', 'Коньяк', 'gentDropdown')"><span class="drink-icon">🥃</span> Классика жанра (Коньяк)</div>
+                            <div class="select-option" data-value="Водка" onclick="if(!isLocked && !isSubmitted) selectOption('gent', 'Водка', 'gentDropdown')"><span class="drink-icon">🧊</span> Белое на черном (Водка)</div>
+                            <div class="select-option" data-value="Самогон" onclick="if(!isLocked && !isSubmitted) selectOption('gent', 'Самогон', 'gentDropdown')"><span class="drink-icon">⚗️</span> Тайный ингредиент (Самогон)</div>
+                            <div class="select-option" data-value="Вино" onclick="if(!isLocked && !isSubmitted) selectOption('gent', 'Вино', 'gentDropdown')"><span class="drink-icon">🥂</span> Мемуары в Провансе (Белое вино)</div>
+                            <div class="select-option" data-value="Трезвость" onclick="if(!isLocked && !isSubmitted) selectOption('gent', 'Трезвость', 'gentDropdown')"><span class="drink-icon">💧</span> Чистая страница (Без алкоголя)</div>
+                        </div>
+                    </div>
+
+                    <div class="guest-label" style="margin-top: 20px;">LADY</div>
+                    <input type="text" id="ladyName" placeholder="Имя и Фамилия" autocomplete="off">
+                    <p class="quote-hint" id="quote-lady">«Для легкости слога и вдохновения...»</p>
+                    
+                    <div class="custom-select" id="customSelectLady">
+                        <div class="select-header" onclick="if(!isLocked && !isSubmitted) toggleDropdown('ladyDropdown')">
+                            <span>Ваше идеальное послесловие?</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="select-dropdown" id="ladyDropdown">
+                            <div class="select-option" data-value="Шампанское" onclick="if(!isLocked && !isSubmitted) selectOption('lady', 'Шампанское', 'ladyDropdown')"><span class="drink-icon">🍾</span> Гэтсби рекомендует (Шампанское)</div>
+                            <div class="select-option" data-value="Вино" onclick="if(!isLocked && !isSubmitted) selectOption('lady', 'Вино', 'ladyDropdown')"><span class="drink-icon">🥂</span> Хемингуэй одобрил бы (Белое вино)</div>
+                            <div class="select-option" data-value="Самогон" onclick="if(!isLocked && !isSubmitted) selectOption('lady', 'Самогон', 'ladyDropdown')"><span class="drink-icon">⚗️</span> Лирическое отступление (Самогон)</div>
+                            <div class="select-option" data-value="Коньяк" onclick="if(!isLocked && !isSubmitted) selectOption('lady', 'Коньяк', 'ladyDropdown')"><span class="drink-icon">🥃</span> Историческая хроника (Коньяк)</div>
+                            <div class="select-option" data-value="Водка" onclick="if(!isLocked && !isSubmitted) selectOption('lady', 'Водка', 'ladyDropdown')"><span class="drink-icon">🧊</span> Проза жизни (Водка)</div>
+                            <div class="select-option" data-value="Трезвость" onclick="if(!isLocked && !isSubmitted) selectOption('lady', 'Трезвость', 'ladyDropdown')"><span class="drink-icon">💧</span> Вне игры (Без алкоголя)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="attendanceNo" class="section-hidden">
+                    <div class="absent-message" id="absentMessage">«Судьба-злодейка вносит коррективы в наши планы. Не сможем быть, но шлем самый мощный заряд любви и позитива!»</div>
+                    <div class="guest-label">ВАШЕ ИМЯ И ФАМИЛИЯ В ТИТРАХ</div>
+                    <input type="text" id="absentName" placeholder="Как представить в титрах?" autocomplete="off">
+                </div>
+
+                <hr>
+                <div class="error-message" id="errorMessage"></div>
+                
+                <button type="submit" class="theater-button" id="submitButton">
+                    <span id="submitText">ВНЕСТИ В СПИСОК ГЕРОЕВ</span>
+                </button>
+
+                <div class="timer-container hidden" id="timerContainer">
+                    <div class="timer-text" id="timerText">⏳ Ваш ответ зафиксирован. Изменить можно в течение:</div>
+                    <div class="timer-display" id="timerDisplay">24:00:00</div>
+                    <button type="button" class="cancel-button" id="cancelButton">✏️ Изменить выбор</button>
+                </div>
+                
+                <div class="telegram-status" id="telegramStatus"></div>
+            </form>
+        </div>
+        
+        <div class="map-container"><a href="https://yandex.ru/maps/org/prichal_8/105086045667/" target="_blank" class="map-title-link"><div class="map-title"><span>📍</span> До встречи в июле <span>😉 →</span></div></a><div class="map-frame"><div id="yandex-map"></div></div><div class="map-address">Ресторан «Причал-8»<br>Тольятти, Спортивная ул., 9В<small>© Яндекс Карты</small></div></div>
+    </section>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ed9240e3-94da-41e9-9d62-a4208f23cbad&lang=ru_RU" type="text/javascript"></script>
+    <script>
+        // ========== ТАЙМЕР НА ПЕРВОЙ СТРАНИЦЕ ==========
+        function updateTimer() { 
+            const weddingDate = new Date("July 9, 2026 16:00:00").getTime(); 
+            const now = new Date().getTime(); 
+            const diff = weddingDate - now; 
+            if (diff > 0) { 
+                document.getElementById("days").innerText = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0'); 
+                document.getElementById("hours").innerText = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0'); 
+                document.getElementById("minutes").innerText = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0'); 
+                document.getElementById("seconds").innerText = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0'); 
+            } 
+        } 
+        setInterval(updateTimer, 1000); 
+        updateTimer();
+        
+        // ========== КАРТА ==========
+        ymaps.ready(initMap); 
+        function initMap() { 
+            var coords = [53.494433, 49.268975]; 
+            var map = new ymaps.Map("yandex-map", { 
+                center: coords, 
+                zoom: 16, 
+                controls: ['zoomControl', 'fullscreenControl'] 
+            }); 
+            map.controls.remove('geolocationControl'); 
+            map.controls.remove('searchControl'); 
+            var placemark = new ymaps.Placemark(coords, { 
+                hintContent: 'Ресторан «Причал-8»', 
+                balloonContent: 'Ресторан «Причал-8»<br>Тольятти, Спортивная ул., 9В' 
+            }, { 
+                preset: 'islands#greenDotIcon', 
+                iconColor: '#b8c9a8' 
+            }); 
+            map.geoObjects.add(placemark); 
+        }
+        
+        // ========== ЖИВАЯ НИТЬ ДЛЯ ТАЙМИНГА ==========
+        const thread = document.getElementById('thread'); 
+        const items = document.querySelectorAll('.timing-item'); 
+        window.addEventListener('scroll', () => { 
+            const wh = window.innerHeight; 
+            const timeline = document.querySelector('.timeline-container'); 
+            if (timeline) { 
+                const rect = timeline.getBoundingClientRect(); 
+                if (rect.top < wh / 2) { 
+                    let progress = (Math.abs(rect.top - wh/2) / rect.height) * 100; 
+                    thread.style.height = Math.min(Math.max(progress, 0), 100) + "%"; 
+                } 
+            } 
+            items.forEach(item => { 
+                const iRect = item.getBoundingClientRect(); 
+                if (iRect.top < wh * 0.6 && iRect.top > wh * 0.2) item.classList.add('focused'); 
+                else item.classList.remove('focused'); 
+            }); 
+        });
+        
+        // ========== КОНФИГУРАЦИЯ АНКЕТЫ ==========
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzbG4N1xDIg6DFftVOs2pzofgYe35VVTaVkH_c8UaZr4BQffhZsoXDw6Ps-Stgh6PD5/exec';
+        
+        let isSubmitted = false;
+        let isLocked = false;
+        let timerInterval, endTime = null, guestResponseNumber = null;
+        
+        const qG = { "Коньяк": "«Классика, проверенная временем.»", "Водка": "«Кристальная чистота сюжета.»", "Самогон": "«Авторский рецепт с сюрпризом!»", "Вино": "«Легкий очерк южного солнца.»", "Трезвость": "«Ясный ум — залог финала.»" };
+        const qL = { "Шампанское": "«Искристый смех и пузырьки счастья!»", "Вино": "«Изысканная метафора...»", "Самогон": "«Дерзкий подтекст героини.»", "Коньяк": "«Благородный стиль и смысл.»", "Водка": "«Сюжет без лишних прикрас.»", "Трезвость": "«Чистая страница.»" };
+        
+        function updateQuoteByValue(type, value) {
+            if(type === 'gent') {
+                const quote = qG[value] || '«Для тех, кто ценит крепкий сюжет...»';
+                document.getElementById('quote-gent').innerText = quote;
+                if(value) document.getElementById('quote-gent').style.color = "var(--sage)";
+            } else if(type === 'lady') {
+                const quote = qL[value] || '«Для легкости слога и вдохновения...»';
+                document.getElementById('quote-lady').innerText = quote;
+                if(value) document.getElementById('quote-lady').style.color = "var(--sage)";
+            }
+        }
+        
+        function extractDrinkValueFromText(text) {
+            const match = text.match(/\(([^)]+)\)/);
+            return match ? match[1] : text;
+        }
+        
+        function updateSubmitButtonAfterSubmit(isPresent) {
+            const submitTextSpan = document.getElementById('submitText');
+            const submitBtn = document.getElementById('submitButton');
+            
+            if(isPresent) {
+                let rolesCount = 0;
+                if(document.getElementById('gentName').value.trim()) rolesCount++;
+                if(document.getElementById('ladyName').value.trim()) rolesCount++;
+                
+                if(rolesCount === 1) {
+                    submitTextSpan.innerHTML = '✅ ВАША РОЛЬ ПРИНЯТА';
+                } else {
+                    submitTextSpan.innerHTML = '✅ ВАШИ РОЛИ ПРИНЯТЫ';
+                }
+            } else {
+                submitTextSpan.innerHTML = '✅ В ТИТРАХ';
+            }
+            
+            submitBtn.classList.add('submitted-success');
+        }
+        
+        function resetSubmitButtonText() {
+            const submitTextSpan = document.getElementById('submitText');
+            const submitBtn = document.getElementById('submitButton');
+            submitTextSpan.innerHTML = 'ВНЕСТИ В СПИСОК ГЕРОЕВ';
+            submitBtn.classList.remove('submitted-success');
+        }
+        
+        function getGuestId() { 
+            let id = localStorage.getItem('guestId'); 
+            if (!id) { 
+                id = 'guest_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9); 
+                localStorage.setItem('guestId', id); 
+            } 
+            return id; 
+        }
+        
+        function getGuestResponseNumber() {
+            const gid = getGuestId();
+            const map = JSON.parse(localStorage.getItem('guestResponseMap') || '{}');
+            
+            if (map[gid]) {
+                return map[gid];
+            }
+            
+            let lastNumber = localStorage.getItem('lastResponseNumber');
+            let nextNumber = 1;
+            if (lastNumber) {
+                nextNumber = parseInt(lastNumber) + 1;
+            }
+            localStorage.setItem('lastResponseNumber', nextNumber.toString());
+            
+            map[gid] = nextNumber;
+            localStorage.setItem('guestResponseMap', JSON.stringify(map));
+            return nextNumber;
+        }
+        
+        function extractDrinkShort(full) { 
+            const m = full.match(/\(([^)]+)\)/); 
+            return m ? m[1] : full; 
+        }
+        
+        function highlightAbsentMessage() { 
+            const am = document.getElementById('absentMessage'); 
+            if(am) { 
+                am.classList.add('highlight'); 
+                setTimeout(()=>am.classList.remove('highlight'),2000); 
+            } 
+        }
+        
+        function resetForm() {
+            document.getElementById('gentName').value = '';
+            document.getElementById('ladyName').value = '';
+            document.getElementById('absentName').value = '';
+            
+            document.querySelector('#customSelectGent .select-header span:first-child').textContent = 'Ваш литературный жанр?';
+            document.querySelector('#customSelectLady .select-header span:first-child').textContent = 'Ваше идеальное послесловие?';
+            document.querySelector('#customSelectGent .select-header span:first-child').style.color = 'rgba(255, 255, 255, 0.7)';
+            document.querySelector('#customSelectLady .select-header span:first-child').style.color = 'rgba(255, 255, 255, 0.7)';
+            
+            document.getElementById('quote-gent').innerHTML = '«Для тех, кто ценит крепкий сюжет...»';
+            document.getElementById('quote-gent').style.color = 'rgba(255,255,255,0.7)';
+            document.getElementById('quote-lady').innerHTML = '«Для легкости слога и вдохновения...»';
+            document.getElementById('quote-lady').style.color = 'rgba(255,255,255,0.7)';
+            
+            document.querySelector('input[name="attendance"][value="yes"]').checked = true;
+            
+            document.getElementById('attendanceYes').classList.remove('section-hidden');
+            document.getElementById('attendanceNo').classList.add('section-hidden');
+            
+            resetSubmitButtonText();
+        }
+        
+        async function sendToGoogleSheets(isEdit=false) {
+            const submitBtn = document.getElementById('submitButton');
+            const submitText = document.getElementById('submitText');
+            
+            submitBtn.style.animation = 'pulseNeon 1s ease-in-out 3';
+            submitText.innerHTML = 'ОТПРАВЛЯЮ...';
+            submitBtn.disabled = true;
+            
+            const isPresent = document.querySelector('input[name="attendance"]:checked').value === 'yes';
+            let gentDrinkShort="", ladyDrinkShort="";
+            
+            if(isPresent){
+                const gFull = document.querySelector('#customSelectGent .select-header span:first-child').textContent;
+                const lFull = document.querySelector('#customSelectLady .select-header span:first-child').textContent;
+                
+                if(gFull !== 'Ваш литературный жанр?') {
+                    gentDrinkShort = extractDrinkShort(gFull);
+                } else {
+                    gentDrinkShort = "";
+                }
+                
+                if(lFull !== 'Ваше идеальное послесловие?') {
+                    ladyDrinkShort = extractDrinkShort(lFull);
+                } else {
+                    ladyDrinkShort = "";
+                }
+            }
+            
+            if(!guestResponseNumber) {
+                guestResponseNumber = getGuestResponseNumber();
+            }
+            
+            const payload = {
+                responseNumber: guestResponseNumber,
+                attendance: isPresent ? "Да" : "Нет",
+                gentlemanName: document.getElementById('gentName').value.trim(),
+                gentlemanDrink: gentDrinkShort,
+                ladyName: document.getElementById('ladyName').value.trim(),
+                ladyDrink: ladyDrinkShort,
+                absentName: document.getElementById('absentName').value.trim(),
+                guestId: getGuestId(),
+                isEdit,
+                timestamp: new Date().toLocaleString('ru-RU')
+            };
+            
+            try {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const statusDiv = document.getElementById('telegramStatus');
+                statusDiv.innerHTML = `✅ Ответ отправлен`;
+                statusDiv.style.color = 'var(--sage)';
+                
+                return true;
+            } catch(e) {
+                console.error('Ошибка отправки:', e);
+                const statusDiv = document.getElementById('telegramStatus');
+                statusDiv.innerHTML = '❌ Ошибка отправки. Попробуйте снова.';
+                statusDiv.style.color = '#ff6b6b';
+                submitBtn.disabled = false;
+                submitText.innerHTML = isPresent ? 'ВНЕСТИ В СПИСОК ГЕРОЕВ' : 'НАПИСАТЬ В ТИТРАХ';
+                submitBtn.style.animation = '';
+                return false;
+            } finally {
+                setTimeout(() => {
+                    submitBtn.style.animation = '';
+                }, 1000);
+            }
+        }
+        
+        function toggleDropdown(id) {
+            if(isLocked || isSubmitted) return;
+            
+            document.querySelectorAll('.select-dropdown').forEach(dd => {
+                if(dd.id !== id) {
+                    dd.classList.remove('show');
+                    const header = dd.previousElementSibling;
+                    if(header) header.classList.remove('active');
+                }
+            });
+            
+            const dropdown = document.getElementById(id);
+            const header = dropdown.previousElementSibling;
+            
+            dropdown.classList.toggle('show');
+            if(header) header.classList.toggle('active');
+        }
+        
+        function selectOption(type, value, dropdownId) {
+            if(isLocked || isSubmitted) return;
+            const dd = document.getElementById(dropdownId);
+            const header = dd.previousElementSibling;
+            const span = header.querySelector('span:first-child');
+            const opt = Array.from(dd.querySelectorAll('.select-option')).find(o => o.getAttribute('data-value') === value);
+            if(opt) span.textContent = opt.textContent.trim();
+            span.style.color = 'white';
+            dd.classList.remove('show');
+            header.classList.remove('active');
+            
+            if(type === 'gent') {
+                document.getElementById('quote-gent').innerText = qG[value] || '«Для тех, кто ценит крепкий сюжет...»';
+                document.getElementById('quote-gent').style.color = "var(--sage)";
+            } else {
+                document.getElementById('quote-lady').innerText = qL[value] || '«Для легкости слога и вдохновения...»';
+                document.getElementById('quote-lady').style.color = "var(--sage)";
+            }
+            saveState();
+        }
+        
+        function toggleAttendance() {
+            if(isLocked || isSubmitted) return;
+            const isPresent = document.querySelector('input[name="attendance"]:checked').value === 'yes';
+            if(isPresent) {
+                document.getElementById('attendanceYes').classList.remove('section-hidden');
+                document.getElementById('attendanceNo').classList.add('section-hidden');
+                document.getElementById('submitText').innerHTML = 'ВНЕСТИ В СПИСОК ГЕРОЕВ';
+            } else {
+                document.getElementById('attendanceYes').classList.add('section-hidden');
+                document.getElementById('attendanceNo').classList.remove('section-hidden');
+                document.getElementById('submitText').innerHTML = 'НАПИСАТЬ В ТИТРАХ';
+            }
+            saveState();
+        }
+        
+        function saveState() {
+            localStorage.setItem('weddingFormState', JSON.stringify({
+                endTime, isSubmitted, isLocked, guestResponseNumber,
+                formData: {
+                    gentName: document.getElementById('gentName').value,
+                    ladyName: document.getElementById('ladyName').value,
+                    absentName: document.getElementById('absentName').value,
+                    gentDrink: document.querySelector('#customSelectGent .select-header span:first-child').textContent,
+                    ladyDrink: document.querySelector('#customSelectLady .select-header span:first-child').textContent,
+                    attendance: document.querySelector('input[name="attendance"]:checked').value
+                }
+            }));
+        }
+        
+        function loadState() {
+            const s = localStorage.getItem('weddingFormState');
+            if(!s) return;
+            try {
+                const st = JSON.parse(s);
+                
+                const isTimerExpired = st.endTime && new Date().getTime() > st.endTime;
+                
+                endTime = st.endTime;
+                guestResponseNumber = st.guestResponseNumber;
+                
+                if(st.formData) {
+                    document.getElementById('gentName').value = st.formData.gentName || '';
+                    document.getElementById('ladyName').value = st.formData.ladyName || '';
+                    document.getElementById('absentName').value = st.formData.absentName || '';
+                    
+                    const gentDrinkText = st.formData.gentDrink || 'Ваш литературный жанр?';
+                    const ladyDrinkText = st.formData.ladyDrink || 'Ваше идеальное послесловие?';
+                    document.querySelector('#customSelectGent .select-header span:first-child').textContent = gentDrinkText;
+                    document.querySelector('#customSelectLady .select-header span:first-child').textContent = ladyDrinkText;
+                    
+                    if(gentDrinkText !== 'Ваш литературный жанр?') {
+                        document.querySelector('#customSelectGent .select-header span:first-child').style.color = 'white';
+                        const gentValue = extractDrinkValueFromText(gentDrinkText);
+                        updateQuoteByValue('gent', gentValue);
+                    }
+                    if(ladyDrinkText !== 'Ваше идеальное послесловие?') {
+                        document.querySelector('#customSelectLady .select-header span:first-child').style.color = 'white';
+                        const ladyValue = extractDrinkValueFromText(ladyDrinkText);
+                        updateQuoteByValue('lady', ladyValue);
+                    }
+                    
+                    document.querySelector(`input[name="attendance"][value="${st.formData.attendance}"]`).checked = true;
+                    toggleAttendance();
+                }
+                
+                if(isTimerExpired) {
+                    isLocked = true;
+                    isSubmitted = true;
+                    
+                    document.getElementById('formCard').classList.add('form-disabled');
+                    document.getElementById('submitButton').disabled = true;
+                    document.getElementById('timerContainer').classList.add('hidden');
+                    document.getElementById('cancelButton').classList.add('hidden');
+                    
+                    document.querySelectorAll('.select-header').forEach(header => {
+                        header.style.pointerEvents = 'none';
+                        header.style.opacity = '0.6';
+                    });
+                    document.querySelectorAll('input[name="attendance"]').forEach(radio => {
+                        radio.disabled = true;
+                    });
+                    document.getElementById('gentName').disabled = true;
+                    document.getElementById('ladyName').disabled = true;
+                    document.getElementById('absentName').disabled = true;
+                    
+                    const isPresent = document.querySelector('input[name="attendance"]:checked').value === 'yes';
+                    updateSubmitButtonAfterSubmit(isPresent);
+                    
+                    endTime = null;
+                    saveState();
+                } else if(st.endTime && st.isSubmitted) {
+                    isSubmitted = true;
+                    isLocked = false;
+                    
+                    document.getElementById('timerContainer').classList.remove('hidden');
+                    if(!timerInterval) timerInterval = setInterval(updateCountdownTimer, 1000);
+                    document.getElementById('submitButton').disabled = true;
+                    document.getElementById('cancelButton').classList.remove('hidden');
+                    
+                    document.getElementById('gentName').disabled = true;
+                    document.getElementById('ladyName').disabled = true;
+                    document.getElementById('absentName').disabled = true;
+                    document.querySelectorAll('.select-header').forEach(header => {
+                        header.style.pointerEvents = 'none';
+                        header.style.opacity = '0.6';
+                    });
+                    document.querySelectorAll('input[name="attendance"]').forEach(radio => {
+                        radio.disabled = true;
+                    });
+                    
+                    const isPresent = document.querySelector('input[name="attendance"]:checked').value === 'yes';
+                    updateSubmitButtonAfterSubmit(isPresent);
+                } else {
+                    isSubmitted = false;
+                    isLocked = false;
+                }
+            } catch(e) {
+                console.error('Ошибка загрузки состояния:', e);
+            }
+        }
+        
+        function cancelSubmission() {
+            if(!isSubmitted || isLocked) return;
+            
+            resetForm();
+            isSubmitted = false;
+            
+            document.getElementById('gentName').disabled = false;
+            document.getElementById('ladyName').disabled = false;
+            document.getElementById('absentName').disabled = false;
+            document.querySelectorAll('.select-header').forEach(header => {
+                header.style.pointerEvents = 'auto';
+                header.style.opacity = '1';
+            });
+            document.querySelectorAll('input[name="attendance"]').forEach(radio => {
+                radio.disabled = false;
+            });
+            
+            document.getElementById('submitButton').disabled = false;
+            
+            document.getElementById('timerText').innerHTML = '⏳ Время на изменение ответа:';
+            document.getElementById('cancelButton').classList.add('hidden');
+            
+            saveState();
+            
+            const statusDiv = document.getElementById('telegramStatus');
+            statusDiv.innerHTML = '✏️ Анкета очищена. Заполните заново';
+            statusDiv.style.color = 'var(--sage)';
+        }
+        
+        function updateCountdownTimer() {
+            if(!endTime) return;
+            const now = new Date().getTime();
+            const dist = endTime - now;
+            
+            if(dist <= 0) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+                
+                isLocked = true;
+                isSubmitted = true;
+                
+                document.getElementById('formCard').classList.add('form-disabled');
+                document.getElementById('submitButton').disabled = true;
+                document.getElementById('timerContainer').classList.add('hidden');
+                document.getElementById('cancelButton').classList.add('hidden');
+                
+                document.querySelectorAll('.select-header').forEach(header => {
+                    header.style.pointerEvents = 'none';
+                    header.style.opacity = '0.6';
+                });
+                document.querySelectorAll('input[name="attendance"]').forEach(radio => {
+                    radio.disabled = true;
+                });
+                document.getElementById('gentName').disabled = true;
+                document.getElementById('ladyName').disabled = true;
+                document.getElementById('absentName').disabled = true;
+                
+                const isPresent = document.querySelector('input[name="attendance"]:checked').value === 'yes';
+                updateSubmitButtonAfterSubmit(isPresent);
+                
+                endTime = null;
+                saveState();
+                return;
+            }
+            
+            const h = Math.floor(dist/(1000*60*60));
+            const m = Math.floor((dist%(1000*60*60))/(1000*60));
+            const s = Math.floor((dist%(1000*60))/1000);
+            document.getElementById('timerDisplay').textContent = `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+        }
+        
+        document.getElementById('weddingForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            if(isLocked) return;
+            if(isSubmitted) {
+                const statusDiv = document.getElementById('telegramStatus');
+                statusDiv.innerHTML = '⚠️ Ответ уже отправлен. Используйте кнопку "Изменить выбор"';
+                statusDiv.style.color = '#ffaa44';
+                return;
+            }
+            
+            document.getElementById('errorMessage').classList.remove('show');
+            const isPresent = document.querySelector('input[name="attendance"]:checked').value === 'yes';
+            
+            if(isPresent) {
+                const gent = document.getElementById('gentName').value.trim();
+                const lady = document.getElementById('ladyName').value.trim();
+                const gDrink = document.querySelector('#customSelectGent .select-header span:first-child').textContent;
+                const lDrink = document.querySelector('#customSelectLady .select-header span:first-child').textContent;
+                
+                if(!gent && !lady) {
+                    document.getElementById('errorMessage').textContent = '⚠️ Заполните хотя бы одно поле (GENTLEMAN или LADY)';
+                    document.getElementById('errorMessage').classList.add('show');
+                    return;
+                }
+                if(gent && (gDrink === 'Ваш литературный жанр?' || gDrink === 'Выберите напиток')) {
+                    document.getElementById('errorMessage').textContent = '⚠️ Выберите напиток для GENTLEMAN';
+                    document.getElementById('errorMessage').classList.add('show');
+                    return;
+                }
+                if(lady && (lDrink === 'Ваше идеальное послесловие?' || lDrink === 'Выберите напиток')) {
+                    document.getElementById('errorMessage').textContent = '⚠️ Выберите напиток для LADY';
+                    document.getElementById('errorMessage').classList.add('show');
+                    return;
+                }
+            } else {
+                if(!document.getElementById('absentName').value.trim()) {
+                    document.getElementById('errorMessage').textContent = '⚠️ Заполните Ваше имя и фамилию в титрах';
+                    document.getElementById('errorMessage').classList.add('show');
+                    return;
+                }
+                highlightAbsentMessage();
+            }
+            
+            if(!guestResponseNumber) {
+                guestResponseNumber = getGuestResponseNumber();
+            }
+            
+            const success = await sendToGoogleSheets(isSubmitted);
+            
+            if(success) {
+                if(!endTime) endTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+                updateCountdownTimer();
+                
+                document.getElementById('timerContainer').classList.remove('hidden');
+                document.getElementById('timerText').classList.remove('hidden');
+                document.getElementById('cancelButton').classList.remove('hidden');
+                
+                if(!timerInterval) timerInterval = setInterval(updateCountdownTimer, 1000);
+                
+                isSubmitted = true;
+                saveState();
+                
+                document.getElementById('gentName').disabled = true;
+                document.getElementById('ladyName').disabled = true;
+                document.getElementById('absentName').disabled = true;
+                document.querySelectorAll('.select-header').forEach(header => {
+                    header.style.pointerEvents = 'none';
+                    header.style.opacity = '0.6';
+                });
+                document.querySelectorAll('input[name="attendance"]').forEach(radio => {
+                    radio.disabled = true;
+                });
+                
+                document.getElementById('submitButton').disabled = true;
+                updateSubmitButtonAfterSubmit(isPresent);
+            }
+        });
+        
+        document.querySelectorAll('input[name="attendance"]').forEach(r => {
+            r.addEventListener('change', toggleAttendance);
+        });
+        document.getElementById('cancelButton').addEventListener('click', cancelSubmission);
+        
+        window.addEventListener('load', () => {
+            loadState();
+            if(!localStorage.getItem('weddingFormState')) {
+                toggleAttendance();
+                resetSubmitButtonText();
+            }
+            document.getElementById('bgVideo').play().catch(e=>{});
+        });
+    </script>
+</body>
+</html>
