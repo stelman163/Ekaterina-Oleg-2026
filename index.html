@@ -1013,8 +1013,8 @@
         });
         
         // ========== КОНФИГУРАЦИЯ АНКЕТЫ ==========
-        // НОВЫЙ URL СКРИПТА (ОБНОВЛЁН)
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyJHWQ5_EHw__F3yaa5Ja9lPdfPBm4Pa3a_v_GAOPGImf8EjvvXCBAM_tKexPHas9bY/exec';
+        // НОВЫЙ URL ВАШЕГО СКРИПТА
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby2KyoDcFNcV4OsPgoF62fxXJiOiozevHZZXhRXA4Hr6xytQOsK-xkZOOiNtD5O51sJ/exec';
         
         let isSubmitted = false;
         let isLocked = false;
@@ -1038,6 +1038,11 @@
         function extractDrinkValueFromText(text) {
             const match = text.match(/\(([^)]+)\)/);
             return match ? match[1] : text;
+        }
+        
+        function extractDrinkShort(full) { 
+            const m = full.match(/\(([^)]+)\)/); 
+            return m ? m[1] : full; 
         }
         
         function updateSubmitButtonAfterSubmit(isPresent) {
@@ -1095,11 +1100,6 @@
             map[gid] = nextNumber;
             localStorage.setItem('guestResponseMap', JSON.stringify(map));
             return nextNumber;
-        }
-        
-        function extractDrinkShort(full) { 
-            const m = full.match(/\(([^)]+)\)/); 
-            return m ? m[1] : full; 
         }
         
         function highlightAbsentMessage() { 
@@ -1165,6 +1165,7 @@
                 guestResponseNumber = getGuestResponseNumber();
             }
             
+            // ПРАВИЛЬНЫЙ payload - данные соответствуют колонкам в Google Sheets
             const payload = {
                 responseNumber: guestResponseNumber,
                 attendance: isPresent ? "Да" : "Нет",
@@ -1174,37 +1175,25 @@
                 ladyDrink: ladyDrinkShort,
                 absentName: document.getElementById('absentName').value.trim(),
                 guestId: getGuestId(),
-                isEdit,
+                isEdit: isEdit,
                 timestamp: new Date().toLocaleString('ru-RU')
             };
             
             try {
                 const response = await fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
-                    mode: 'cors',
+                    mode: 'no-cors',
                     headers: { 
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(payload)
                 });
                 
-                const result = await response.json();
-                console.log('Ответ от сервера:', result);
-                
                 const statusDiv = document.getElementById('telegramStatus');
+                statusDiv.innerHTML = `✅ Ответ отправлен (№${guestResponseNumber})`;
+                statusDiv.style.color = 'var(--sage)';
+                return true;
                 
-                if (result.status === 'success') {
-                    statusDiv.innerHTML = `✅ Ответ отправлен`;
-                    statusDiv.style.color = 'var(--sage)';
-                    return true;
-                } else {
-                    statusDiv.innerHTML = `❌ Ошибка: ${result.message || 'Неизвестная ошибка'}`;
-                    statusDiv.style.color = '#ff6b6b';
-                    submitBtn.disabled = false;
-                    submitText.innerHTML = isPresent ? 'ВНЕСТИ В СПИСОК ГЕРОЕВ' : 'НАПИСАТЬ В ТИТРАХ';
-                    submitBtn.style.animation = '';
-                    return false;
-                }
             } catch(e) {
                 console.error('Ошибка отправки:', e);
                 const statusDiv = document.getElementById('telegramStatus');
