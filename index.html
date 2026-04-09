@@ -9,29 +9,24 @@ function doPost(e) {
     const now = new Date();
     const timestamp = Utilities.formatDate(now, "GMT+3", "dd.MM.yyyy, HH:mm:ss");
     
-    const row = [
-      timestamp, data.responseNumber || '', data.attendance || '',
-      data.gentlemanName || '', data.gentlemanDrink || '',
-      data.ladyName || '', data.ladyDrink || '',
-      data.absentName || '', data.guestId || '',
-      data.isEdit ? 'Да' : 'Нет', data.timestamp || ''
-    ];
+    const row = [timestamp, data.responseNumber || '', data.attendance || '', data.gentlemanName || '', data.gentlemanDrink || '', data.ladyName || '', data.ladyDrink || '', data.absentName || '', data.guestId || '', data.isEdit ? 'Да' : 'Нет', data.timestamp || ''];
     sheet.appendRow(row);
     
-    let message = data.attendance === 'Да' ? 
-      `✅ НОВЫЙ ОТВЕТ!\n\nНомер: ${data.responseNumber}\nВремя: ${data.timestamp}\n\n${data.gentlemanName ? '🎩 '+data.gentlemanName+' ('+(data.gentlemanDrink||'не выбран')+')\n' : ''}${data.ladyName ? '👗 '+data.ladyName+' ('+(data.ladyDrink||'не выбран')+')\n' : ''}` :
-      `❌ НЕ СМОЖЕТ ПРИЙТИ!\n\nНомер: ${data.responseNumber}\nИмя: ${data.absentName}\nВремя: ${data.timestamp}`;
+    let message = '';
+    if (data.attendance === 'Да') {
+      message = '✅ НОВЫЙ ОТВЕТ!\n\nНомер: ' + data.responseNumber + '\nВремя: ' + data.timestamp + '\n\n';
+      if (data.gentlemanName) message += '🎩 ' + data.gentlemanName + ' (' + (data.gentlemanDrink || 'не выбран') + ')\n';
+      if (data.ladyName) message += '👗 ' + data.ladyName + ' (' + (data.ladyDrink || 'не выбран') + ')\n';
+    } else {
+      message = '❌ НЕ СМОЖЕТ ПРИЙТИ!\n\nНомер: ' + data.responseNumber + '\nИмя: ' + data.absentName + '\nВремя: ' + data.timestamp + '\n';
+    }
     
-    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-    UrlFetchApp.fetch(url, {
-      method: 'post',
-      contentType: 'application/json',
-      payload: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message })
-    });
+    const url = 'https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN + '/sendMessage';
+    UrlFetchApp.fetch(url, { method: 'post', contentType: 'application/json', payload: JSON.stringify({ chat_id: TELEGRAM_CHAT_ID, text: message }), muteHttpExceptions: true });
     
-    return ContentService.createTextOutput(JSON.stringify({ status: 'success' })).setMimeType(ContentService.MimeType.JSON);
+    return ContentService.createTextOutput("OK");
   } catch(error) {
-    return ContentService.createTextOutput(JSON.stringify({ status: 'error', error: error.toString() })).setMimeType(ContentService.MimeType.JSON);
+    return ContentService.createTextOutput("Error: " + error.toString());
   }
 }
 
