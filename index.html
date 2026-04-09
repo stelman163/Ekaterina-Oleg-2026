@@ -1289,10 +1289,12 @@
                 isLocked = st.isLocked || false;
                 
                 if(st.formData) {
+                    // Восстанавливаем текстовые поля
                     document.getElementById('gentName').value = st.formData.gentName || '';
                     document.getElementById('ladyName').value = st.formData.ladyName || '';
                     document.getElementById('absentName').value = st.formData.absentName || '';
                     
+                    // Восстанавливаем выбор напитков
                     const gentDrinkText = st.formData.gentDrink || 'Ваш литературный жанр?';
                     const ladyDrinkText = st.formData.ladyDrink || 'Ваше идеальное послесловие?';
                     document.querySelector('#customSelectGent .select-header span:first-child').textContent = gentDrinkText;
@@ -1309,10 +1311,23 @@
                         updateQuoteByValue('lady', ladyValue);
                     }
                     
-                    document.querySelector(`input[name="attendance"][value="${st.formData.attendance}"]`).checked = true;
-                    toggleAttendance();
+                    // ВАЖНО: Восстанавливаем выбор attendance (вкладку)
+                    const attendanceValue = st.formData.attendance || 'yes';
+                    document.querySelector(`input[name="attendance"][value="${attendanceValue}"]`).checked = true;
+                    
+                    // Принудительно обновляем видимость вкладок
+                    if (attendanceValue === 'yes') {
+                        document.getElementById('attendanceYes').classList.remove('section-hidden');
+                        document.getElementById('attendanceNo').classList.add('section-hidden');
+                        document.getElementById('submitText').innerHTML = 'ВНЕСТИ В СПИСОК ГЕРОЕВ';
+                    } else {
+                        document.getElementById('attendanceYes').classList.add('section-hidden');
+                        document.getElementById('attendanceNo').classList.remove('section-hidden');
+                        document.getElementById('submitText').innerHTML = 'НАПИСАТЬ В ТИТРАХ';
+                    }
                 }
                 
+                // Если ответ уже был отправлен, блокируем форму
                 if(isSubmitted) {
                     console.log('Форма была отправлена ранее, блокируем');
                     document.getElementById('formCard').classList.add('form-disabled');
@@ -1328,6 +1343,7 @@
                         radio.disabled = true;
                     });
                     
+                    // Показываем таймер если нужно
                     if(endTime && new Date().getTime() < endTime) {
                         document.getElementById('timerContainer').classList.remove('hidden');
                         document.getElementById('cancelButton').classList.remove('hidden');
